@@ -9,9 +9,12 @@
     --team-bg-color: #F5F4FA;
     --footer-contacts-color: rgba(255, 255, 255, 0.6);
     --header-border-color: #ECECEC;
+    --border-color: #EEEEEE;
 
     --main-font: 'Roboto', sans-serif;
     --title-font: 'Raleway', sans-serif;
+
+    --examples-gap: 30px;
 }
 
 
@@ -28,6 +31,7 @@ body {
 
 .link {
     text-decoration: none;
+    color: inherit;
 }
 
 ul {
@@ -48,13 +52,17 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /* !!!    Хэдэр начало   !!! */
+.page-header {
+    border-bottom: 1px solid var(--header-border-color);
+
+}
+
 .page-header .container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     min-height: 80px;
-    border-bottom: 1px solid var(--header-border-color);
 }
 
 nav {
@@ -199,6 +207,11 @@ nav {
 
     color: var(--title-text-color);
 }
+
+.works {
+    padding-top: 0;
+}
+
 .works-list {
     display: flex;
     flex-wrap: wrap;
@@ -284,9 +297,10 @@ nav {
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 /* Портфолио начало */
-.portfolio-section {
-    margin-top: 94px;
-    margin-bottom: 94px;
+.filter-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
 }
 
 .filter-button {
@@ -304,6 +318,10 @@ nav {
     border-width: 0;
 }
 
+.filter-list .item + .item {
+    margin-left: 8px;
+}
+
 .filter-button:hover,
 .filter-button:focus {
     color: var(--white-color);
@@ -311,8 +329,38 @@ nav {
     background-color: var(--accent-color);
 }
 
+/* .example {
+    display: block;
+    text-align: center;
+} */
+
+.examples {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--examples-gap));
+    margin-left: calc(-1 * var(--examples-gap));
+}
+
 .examples .item {
+    flex-basis: calc(100%/3 - var(--examples-gap));
+    margin-top: var(--examples-gap);
+    margin-left: var(--examples-gap);
+}
+
+
+/* .examples .item {
     color: inherit;
+} */
+
+.example-sign {
+    padding: 20px 24px;
+    border: solid var(--border-color);
+    border-width: 0 1px 1px 1px;
+}
+
+.examples img {
+    display: block;
+    max-width: 100%;
 }
 
 .examples .title {
@@ -321,6 +369,7 @@ nav {
     line-height: 2;
     letter-spacing: 0.06em;
     color: var(--title-text-color);
+    margin-bottom: 4px;
 }
 
 .examples .text {
