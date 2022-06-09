@@ -45,6 +45,12 @@ h1, h2, h3, h4, h5, h6, p {
     padding: 0;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -59,15 +65,14 @@ h1, h2, h3, h4, h5, h6, p {
 
 .page-header .container{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    /* flex-wrap: wrap; */
     align-items: center;
-    min-height: 80px;
+    /* min-height: 80px; */
 }
 
 nav {
     display: flex;
-    /* align-items: center; */
+    align-items: center;
 }
 
 .logo {
@@ -87,12 +92,16 @@ nav {
 .contacts-nav {
     display: flex;
     align-items: center;
-    /* list-style-type:none; */
     font-weight: 500;
     font-size: 14px;
     line-height: 1.143;
-    letter-spacing: 0.02em; 
+    letter-spacing: 0.02em;
+    padding-top: 34px;
+    padding-bottom: 34px;
+}
 
+.contacts-nav {
+    margin-left: auto;
 }
 
 .site-nav .item:not(:last-child),
@@ -102,11 +111,15 @@ nav {
 
 .site-nav .link {
     color: var(--title-text-color);
+        padding-top: 34px;
+        padding-bottom: 34px;
 }
 
 
 .contacts-nav .link {
     color: var(--main-text-color);
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .site-nav .link:hover,
@@ -129,13 +142,16 @@ nav {
 /* !!!    Секция Герой начало   !!! */
 .hero {
     /* width: 1600px; */
-    height: 600px;
+    /* height: 600px; */
     padding-top: 200px;
+    padding-bottom: 200px;
     background-color: var(--footer-bg-color);
     text-align: center;
 }
 
 .hero-title {
+    width: 696px;
+    margin: 0 auto;
     margin-bottom: 30px;
     font-weight: 900;
     font-size: 44px;
@@ -214,9 +230,12 @@ nav {
 
 .works-list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
 }
+
+.works-list .item:not(:last-child) {
+    margin-right: 30px;
+}
+
 /* !!!!    Секция Чем мы занимаемся конец   !!! */
 
 /* !!!!    Секция Команда начало   !!! */
@@ -226,17 +245,18 @@ nav {
 
 .team-list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .team-list .item {
     width: 270px;
     background-color: var(--white-color);
-    margin-bottom: 30px;
     text-align: center;
 
     border-radius: 0 0 4px 4px ;
+}
+
+.team-list .item:not(:last-child) {
+    margin-right: 30px;
 }
 
 .team-cards-img {
@@ -329,11 +349,6 @@ nav {
     background-color: var(--accent-color);
 }
 
-/* .example {
-    display: block;
-    text-align: center;
-} */
-
 .examples {
     display: flex;
     flex-wrap: wrap;
@@ -358,10 +373,7 @@ nav {
     border-width: 0 1px 1px 1px;
 }
 
-.examples img {
-    display: block;
-    max-width: 100%;
-}
+
 
 .examples .title {
     font-weight: 700;
