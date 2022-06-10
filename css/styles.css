@@ -186,12 +186,16 @@ nav {
 
 .feature-list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
 }
 
 .feature-item {
-    width: 270px;
+    flex-basis: 270px;
+}
+
+.feature-item:not(:last-child) {
+    margin-right: 30px;
 }
 
 .feature-list .title {
@@ -252,6 +256,7 @@ nav {
     background-color: var(--white-color);
     text-align: center;
 
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0 0 4px 4px ;
 }
 
@@ -294,15 +299,15 @@ nav {
     color: var(--white-color);
 }
 
-.page-footer .adress {
+.page-footer address {
     font-style: normal;
     font-weight: 400;
     color: var(--white-color);
     margin-top: 20px;
 }
 
-.contacts-list .item {
-    margin-top: 10px;
+.contacts-list .item:not(:first-child) {
+    margin-top: 9px;
 }
 
 
